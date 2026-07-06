@@ -9,13 +9,13 @@ k: .EQUATE 0
 
 printBar: SUBSP 2,i
 LDWA 1,i
-STWA 0,s
+STWA k,s
 
-for: LDWA 0,s
-CPWA 4,s
+for: LDWA k,s
+CPWA n,s
 BRGT endLoop
 ADDA 1,i
-STWA 0,s
+STWA k,s
 
 LDBA '*',i
 STBA charOut,d
